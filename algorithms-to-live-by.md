@@ -9,7 +9,7 @@ When to stop searching and pick e.g. an apartment, a life partner, a job, etc, i
 * You know the number of candidates you can evaluate
 * You evaluate the candidates at random, one at a time
 
-**Solution:** Evaluate 37% of the candidates. After that, make an offer to the first one better than the best of the previous 37%.
+**Solution:** Look-The-Leap Rule: Evaluate 37% of the candidates; after that, make an offer to the first one better than the best of the previous 37%.
 
 **Quality of Solution:** This will lead to picking the best 37% of the time.
 
@@ -18,7 +18,7 @@ The algorithm also works when you don't have a limited *number* of candidates, b
 ## Secretary Problem with Rejection
 * Same as Secretary Problem but candidates can reject you!
 
-**Solution:** If you have 50% chance of rejection, follow the **Secretary Problem** solution but start making offers after only 25% of the candidates were evaluated.
+**Solution:** If you have 50% chance of rejection, follow the Look-The-Leap Rule but start making offers after only 25% of the candidates were evaluated.
 
 **Quality of Solution:** This will lead to picking the best 25% of the time.
 
@@ -59,3 +59,25 @@ The algorithm also works when you don't have a limited *number* of candidates, b
 * I think I kind of intuitively did this on my first job hunt. My family economically supporting me lead to the costs of rejecting offers to be lower than otherwise, which lead to me to accept a better offer than I would otherwise.
 
 * I don't think this idea is new: economic safety leads to one only accepting good offers. On the other hand, people with less economic safety will accept bad offers, not improving their finances. The rich get richer and the poor get poorer.
+
+## When to Park
+
+* Goal is to minimize a) Time looking for a spot and b) Distance from the spot to final destination.
+
+**Solution:** Look-Then-Leap Rule. "The optimal stopping driver should pass up all vacant spots occurrence more than a certain distance from the destination and then take the first space that appears thereafter". The "certain distance" only depends on the occupancy rate. There's table on the book showing these distances for a bunch of occupancy rates.
+
+# Chapter 2 - Explore/Exploit
+
+* "(...) the internal makes the strategy" - When you have a lot of time, exploration has a lot of value. When time is limited, it's time to exploit.
+
+## Multi-armed bandit problem with geometrically discounted payoffs
+
+**Solution:** Always play the arm with the highest Gittins index
+
+"(...) something you have no experience whatsoever is more attractive than a machine that you know pays out 70% of the time!"
+
+"Exploration in itself has value, since trying new things increases our chances of finding the best."
+
+* Assumes no cost of changing arms. If there are costs, the algorithm is no longer optimal
+
+* The Gittins index is hard to calculate on the fly
