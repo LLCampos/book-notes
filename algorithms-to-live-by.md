@@ -81,3 +81,17 @@ The algorithm also works when you don't have a limited *number* of candidates, b
 * Assumes no cost of changing arms. If there are costs, the algorithm is no longer optimal
 
 * The Gittins index is hard to calculate on the fly
+
+## Regret Minimization
+
+* **Upper Confidence Bound** algorithms are the most popular algorithms that look to offer a guarantee of minimal regret.
+
+* "In a multi-armed bandit problem, an Upper Confidence Bound algorithm says, quite simply, to pick the option for which the top of the confidence interval is highest."
+
+* "Like the Gittins index, therefore, Upper Confidence Bound algorithms assign a single number to each arm of the multi-armed bandit. And that number is set to the highest value that the arm could reasonably have, based on the information available so far."
+
+* I think this is basically like saying: "Do what has the most potential".
+
+* What about lower bound? This doesn't consider risks.
+
+(Decided to not do notes for the rest of the book. It just takes too much work to create notes for a book that I heard as an audiobook.)
